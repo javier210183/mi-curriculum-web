@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         videoJava.play();
     });
   
-    carritoCard.addEventListener('mouseout', function() {
+    JavaCard.addEventListener('mouseout', function() {
         videoJava.pause();
         videoJava.currentTime = 0; // Reinicia el video al principio
     });

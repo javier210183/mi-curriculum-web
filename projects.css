@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 body {
-    background-color: #000000; /* Fondo negro */
+    background-color: #000000; 
 }
 
 .banner {
@@ -35,7 +35,7 @@ body {
     inset: 0 0 0 0;
     transform: 
         rotateY(calc((var(--position) - 1) * (360 / 8) * 1deg)) /* Ajuste para 8 tarjetas */
-        translateZ(550px); /* Mantén el mismo radio */
+        translateZ(550px); /* Mantengo el mismo radio */
         opacity: 0.9; /* Añadir transparencia */
         transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
 }
@@ -214,8 +214,8 @@ p{
 /*card Ionic*/
 
 .card-ionic {
-    color: #ec31cd; /* Color de texto blanco */
-    border: 2px solid #007bff; /* Borde azul */
+    color: #ec31cd; 
+    border: 2px solid #007bff; 
 }
 
 .card-ionic .card-title,
@@ -225,8 +225,8 @@ p{
 
 /* Estilos específicos para la card de TypeScript & Angular */
 .card-ionic {
-    color: #f32b08; /* Cambia el color del texto a amarillo */
-    border: 2px solid #fc0606; /* Borde amarillo */
+    color: #f32b08; 
+    border: 2px solid #fc0606; 
 }
 /* Estilo para el botón de la card de TypeScript & Angular */
 .card-ionic .btn {
@@ -241,19 +241,19 @@ p{
 /*card Javascript*/
 
 .card-carrito {
-    color: #ec31cd; /* Color de texto blanco */
-    border: 2px solid #007bff; /* Borde azul */
+    color: #ec31cd; 
+    border: 2px solid #007bff; 
 }
 
 .card-carrito .card-title,
 .card-carrito .card-text {
-    color: #e330e9; /* Asegura que el texto sea blanco */
+    color: #e330e9; 
 }
 
 /* Estilos específicos para la card de TypeScript & Angular */
 .card-carrito {
-    color: #f32b08; /* Cambia el color del texto a amarillo */
-    border: 2px solid #fc0606; /* Borde amarillo */
+    color: #f32b08; 
+    border: 2px solid #fc0606; 
 }
 /* Estilo para el botón de la card de TypeScript & Angular */
 .card-carrito .btn {
@@ -276,7 +276,7 @@ p{
 /* Estilos específicos para la card de TypeScript & Angular */
 .card-java-javafx .card-title,
 .card-java-javafx .card-text {
-    color: #0fdd87 !important; /* Forzar el color amarillo */
+    color: #0fdd87 !important; 
 }
 
 

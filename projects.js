@@ -146,7 +146,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = btnReturn.href;
             }, 1000); // Tiempo igual a la duración del fade-out
         });
-    } else {
+    } else 
+    {
         console.error('Botón "Return" no encontrado');
     }
 });
+  

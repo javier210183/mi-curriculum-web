@@ -1,0 +1,409 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+body {
+    background-color: #000000; /* Fondo negro */
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 400px;
+    height: 225px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(10000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px)  rotateX(-16deg) rotateY(360deg);
+    }
+}
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / 8) * 1deg)) /* Ajuste para 8 tarjetas */
+        translateZ(550px); /* Mantén el mismo radio */
+        opacity: 0.9; /* Añadir transparencia */
+        transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+}
+
+
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:  translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom:  100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1 ::after{
+    position:absolute;
+    inset:0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color:transparent;
+}
+
+.banner .content .author {
+    font-family: 'Poppins';
+    text-align: right;
+    max-width: 200px;
+}
+
+.banner .content h2 {
+    font-size: 3em;
+}
+
+.banner .content .model {
+    background-image: url(images/caricaturaTransparente.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+p{
+    color:bisque
+}
+.banner .slider:hover {
+    animation-play-state: paused; /* Detiene la animación cuando el ratón está encima */
+}
+
+
+/*CARDS
+
+/* Estilos generales para todas las cards */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* Estilos específicos para la card de C# */
+.card-csharp {
+    color: #ffffff; /* Color de texto blanco */
+    border: 2px solid #007bff; /* Borde azul */
+}
+
+.card-csharp .card-title,
+.card-csharp .card-text {
+    color: #ffffff; /* Asegura que el texto sea blanco */
+}
+
+/* Estilos específicos para la card de TypeScript & Angular */
+.card-ts-angular {
+    color: #ffcc00; /* Cambia el color del texto a amarillo */
+    border: 2px solid #ffcc00; /* Borde amarillo */
+}
+
+.card-ts-angular .card-title,
+.card-ts-angular .card-text {
+    color: #ffcc00; /* Color del texto amarillo */
+}
+
+/* Estilo para el botón de la card de TypeScript & Angular */
+.card-ts-angular .btn {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+}
+
+.card-ts-angular .btn:hover {
+    background-color: #ffd633;
+    color: #000;
+}
+
+
+
+/* Estilos para la card de BDD */
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.card-bdd {
+    color: #990c92;
+    border: 2px solid #FF4500;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-bdd .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-bdd .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bdd .card-title, .card-bdd .card-text {
+    color: #FF4500;
+    text-align: center;
+}
+
+.card-bdd .btn {
+    color: #FFF;
+    background-color: #FF4500;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    z-index: 3;
+    align-self: center;
+}
+
+.card-bdd .btn:hover {
+    background-color: #E63E00;
+}
+
+/*card Ionic*/
+
+.card-ionic {
+    color: #ec31cd; /* Color de texto blanco */
+    border: 2px solid #007bff; /* Borde azul */
+}
+
+.card-ionic .card-title,
+.card-ionic .card-text {
+    color: #e330e9; 
+}
+
+/* Estilos específicos para la card de TypeScript & Angular */
+.card-ionic {
+    color: #f32b08; /* Cambia el color del texto a amarillo */
+    border: 2px solid #fc0606; /* Borde amarillo */
+}
+/* Estilo para el botón de la card de TypeScript & Angular */
+.card-ionic .btn {
+    background-color: #f10ad3;
+    color: #000;
+    border: none;
+}
+.card-ionic .btn:hover {
+    background-color: #fa0ad2;
+    color: #000;
+}
+/*card Javascript*/
+
+.card-carrito {
+    color: #ec31cd; /* Color de texto blanco */
+    border: 2px solid #007bff; /* Borde azul */
+}
+
+.card-carrito .card-title,
+.card-carrito .card-text {
+    color: #e330e9; /* Asegura que el texto sea blanco */
+}
+
+/* Estilos específicos para la card de TypeScript & Angular */
+.card-carrito {
+    color: #f32b08; /* Cambia el color del texto a amarillo */
+    border: 2px solid #fc0606; /* Borde amarillo */
+}
+/* Estilo para el botón de la card de TypeScript & Angular */
+.card-carrito .btn {
+    background-color: #f10ad3;
+    color: #000;
+    border: none;
+}
+.card-carrito .btn:hover {
+    background-color: #e30d0d;
+    color: #000;
+}
+/*card Java*/
+
+.card-java-javafx{
+    color: #ec31cd; 
+    border: 2px solid #007bff; 
+}
+
+
+/* Estilos específicos para la card de TypeScript & Angular */
+.card-java-javafx .card-title,
+.card-java-javafx .card-text {
+    color: #0fdd87 !important; /* Forzar el color amarillo */
+}
+
+
+.card-java-javafx {
+    color: #f3eb08; 
+    border: 2px solid #08e92a; 
+}
+/* Estilo para el botón de la card de Java */
+.card-java-javafx .btn {
+    background-color: #0fdd87;
+    color: #000;
+    border: none;
+}
+.card-java-javafx .btn:hover {
+    background-color: #fa0ad2;
+    color: #000;
+}
+
+/* Estilos para la card de PHP - Symfony */
+.card-php-symfony {
+    color: #ec31cd; /* Color de texto */
+    border: 2px solid black; 
+    position: relative;
+    overflow: hidden;
+}
+
+.card-php-symfony .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-php-symfony .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-php-symfony .card-title, .card-php-symfony .card-text {
+    color: #ec31cd; /* Color del texto */
+    text-align: center;
+}
+
+.card-php-symfony .btn {
+    color: #FFF;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    z-index: 3;
+    align-self: center;
+}
+
+/*.card-php-symfony .btn:hover {
+    background-color: #0056b3;
+}
+*/
+/* Estilos para la card de Fin de Ciclo */
+.card-findeCiclo {
+    color: #ec31cd; /* Color de texto */
+    border: 2px solid black; /* Borde */
+    position: relative;
+    overflow: hidden;
+}
+
+.card-findeCiclo .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-findeCiclo .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-findeCiclo .card-title, .card-findeCiclo .card-text {
+    color: #ec31cd; /* Color del texto */
+    text-align: center;
+}
+
+.card-findeCiclo .btn {
+    color: #FFF;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    z-index: 3;
+    align-self: center;
+}
+
+/*.card-findeCiclo .btn:hover {
+    background-color: #0056b3;
+}
+*/
+.btn-return {
+    background-color: rgba(255, 255, 255, 0.1); /* Botón gris transparente */
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
+    position: relative; /* Asegura que el z-index funcione dentro del flujo normal del documento */
+}

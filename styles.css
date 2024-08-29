@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Color del texto blanco */
+    overflow: hidden;
+}
+
+#disordered-letters {
+    pointer-events: none;
+    z-index: 0;
+}
+
+.letter {
+    position: absolute;
+    font-size: 40rem; /* Tamaño de letra muy grande cuando están desordenadas */
+    font-weight: bold;
+    color: rgba(192, 192, 192, 0.2); /* Color gris claro transparente inicialmente */
+    text-align: center;
+    line-height: 1;
+    transform-style: preserve-3d;
+    transition: transform 1s ease, color 1s ease, text-shadow 0.5s ease, font-size 0.5s ease;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para un relieve inicial */
+    animation: rotate 5s infinite linear; /* Añadir rotación continua */
+}
+
+.letter.in-position {
+    font-size: 10rem; /* Tamaño normal cuando se ordenan */
+    color: rgba(192, 192, 192, 1); /* Color gris claro cuando se ordenan */
+    text-shadow: 
+        -2px -2px 2px #fff,   /* Borde superior e izquierdo claro para simular la luz */
+        2px 2px 2px #000,     /* Borde inferior y derecho oscuro para simular sombra */
+        0px 4px 10px rgba(0, 0, 0, 0.5), /* Sombra principal más pronunciada para profundidad */
+        inset 0px 2px 5px rgba(255, 255, 255, 0.3), /* Sombra interna para efecto 3D */
+        inset 0px -2px 5px rgba(0, 0, 0, 0.3); /* Sombra interna oscura para más relieve */
+    transform: translateZ(0) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    animation: none; /* Detener la rotación cuando las letras están en posición */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.container-fluid {
+    z-index: 1; /* Asegura que el contenido esté por encima de las letras */
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p.lead {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary, .btn-secondary {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+/* Estilo CSS para la animación de desvanecimiento */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+iframe {
+    width: 120%;
+    height: 100vh; /* Ocupa todo el alto de la ventana gráfica */
+    border: none; /* Eliminar el borde */
+    display: block; /* Asegura que no haya espacios en blanco alrededor del iframe */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margin */
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño del iframe */
+}

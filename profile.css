@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('./images/fondo.jpg'); /* Fondo de la página */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; /* Color del texto blanco */
+}
+
+.container {
+    max-width: 1500px; /* Máximo ancho del contenido */
+    margin: 0 auto; /* Centramos el contenedor */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para el contenedor */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content-container {
+    background-color: #111; /* Fondo oscuro dentro del contenedor de contenido */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados para el contenedor */
+}
+
+.video-container {
+    margin-top: 20px; /* Margen superior entre el PDF y el video */
+    text-align: center; /* Centramos el contenido del div */
+    background-image: url('./images/fondo.jpg'); /* Fondo del div del video */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Espaciado interno del contenedor de video */
+    border-radius: 10px; /* Bordes redondeados para el contenedor de video */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para el video */
+}
+
+.video-container h2 {
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    color: #fff; /* Color del texto del título */
+}
+
+.video-container video {
+    width: 70%; /* El video ocupa un 70% del ancho disponible */
+    height: auto; /* Mantendrá la proporción original */
+    border: 2px solid #222; /* Borde oscuro alrededor del video */
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 600px; /* Reducir la altura en pantallas más pequeñas */
+    }
+
+    .video-container {
+        width: 100%;
+        margin-top: 20px; /* Ajustar para pantallas más pequeñas */
+    }
+}

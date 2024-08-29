@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoCsharp = csharpCard.querySelector('video');
 
     csharpCard.addEventListener('mouseover', function() {
-        videoCsharp.play();
+        videoCsharp.play().catch(e => {
+            console.log("Error al intentar reproducir el video:", e.message);
+        });
     });
 
     csharpCard.addEventListener('mouseout', function() {

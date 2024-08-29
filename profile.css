@@ -5,16 +5,16 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Fira Code', monospace;
-    background-image: url('./images/fondo.jpg'); /* Fondo de la página */
+    background-image: url('./images/fondo.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #fff; /* Color del texto blanco */
+    color: #fff; 
 }
 
 .container {
-    max-width: 1500px; /* Máximo ancho del contenido */
-    margin: 0 auto; /* Centramos el contenedor */
+    max-width: 1500px; 
+    margin: 0 auto; 
     background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para el contenedor */
     padding: 20px; /* Espaciado interno */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para el contenedor */
@@ -28,29 +28,29 @@ h1 {
 .content-container {
     background-color: #111; /* Fondo oscuro dentro del contenedor de contenido */
     padding: 20px;
-    border-radius: 10px; /* Bordes redondeados para el contenedor */
+    border-radius: 10px; 
 }
 
 .video-container {
     margin-top: 20px; /* Margen superior entre el PDF y el video */
-    text-align: center; /* Centramos el contenido del div */
+    text-align: center; 
     background-image: url('./images/fondo.jpg'); /* Fondo del div del video */
     background-size: cover;
     background-position: center;
     padding: 20px; /* Espaciado interno del contenedor de video */
-    border-radius: 10px; /* Bordes redondeados para el contenedor de video */
+    border-radius: 10px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para el video */
 }
 
 .video-container h2 {
-    margin-bottom: 20px; /* Espaciado debajo del título */
-    color: #fff; /* Color del texto del título */
+    margin-bottom: 20px; 
+    color: #fff; 
 }
 
 .video-container video {
-    width: 70%; /* El video ocupa un 70% del ancho disponible */
-    height: auto; /* Mantendrá la proporción original */
-    border: 2px solid #222; /* Borde oscuro alrededor del video */
+    width: 70%; 
+    height: auto; 
+    border: 2px solid #222; 
 }
 
 @media (max-width: 768px) {

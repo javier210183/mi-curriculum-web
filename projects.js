@@ -19,92 +19,79 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoAngular = angularCard.querySelector('video');
 
     angularCard.addEventListener('mouseover', function() {
-        videoAngular.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+        videoAngular.play();
     });
 
     angularCard.addEventListener('mouseout', function() {
         videoAngular.pause();
         videoAngular.currentTime = 0; // Reinicia el video al principio
     });
-
-    // Para la card de Ionic
+    //Para la card de ionic
     const ionicCard = document.querySelector('.card-ionic');
     const videoIonic = ionicCard.querySelector('video');
 
     ionicCard.addEventListener('mouseover', function() {
-        videoIonic.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+        videoIonic.play();
     });
 
     ionicCard.addEventListener('mouseout', function() {
         videoIonic.pause();
         videoIonic.currentTime = 0; // Reinicia el video al principio
     });
-});
 
+});
 document.addEventListener('DOMContentLoaded', function() {
     // Para la card de BDD
     const bddCard = document.querySelector('.card-bdd');
     const videoBdd = bddCard.querySelector('video');
 
     bddCard.addEventListener('mouseover', function() {
-        videoBdd.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+        videoBdd.play();
     });
 
     bddCard.addEventListener('mouseout', function() {
         videoBdd.pause();
         videoBdd.currentTime = 0; // Reinicia el video al principio
     });
+    
 });
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Para la tarjeta de Carrito de Compra
-    const carritoCard = document.querySelector('.card-carrito');
-    const videoCarrito = carritoCard.querySelector('video');
+  // Para la tarjeta de Carrito de Compra
+  const carritoCard = document.querySelector('.card-carrito');
+  const videoCarrito = carritoCard.querySelector('video');
 
-    carritoCard.addEventListener('mouseover', function() {
-        videoCarrito.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
-    });
+  carritoCard.addEventListener('mouseover', function() {
+      videoCarrito.play();
+  });
 
-    carritoCard.addEventListener('mouseout', function() {
-        videoCarrito.pause();
-        videoCarrito.currentTime = 0; // Reinicia el video al principio
-    });
+  carritoCard.addEventListener('mouseout', function() {
+      videoCarrito.pause();
+      videoCarrito.currentTime = 0; // Reinicia el video al principio
+  });
+    
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Para la tarjeta de Java
-    const javaCard = document.querySelector('.card-java-javafx');
-    const videoJava = javaCard.querySelector('video');
-
-    javaCard.addEventListener('mouseover', function() {
-        videoJava.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+    const JavaCard = document.querySelector('.card-java-javafx');
+    const videoJava = JavaCard.querySelector('video');
+  
+    JavaCard.addEventListener('mouseover', function() {
+        videoJava.play();
     });
-
-    javaCard.addEventListener('mouseout', function() {
+  
+    JavaCard.addEventListener('mouseout', function() {
         videoJava.pause();
         videoJava.currentTime = 0; // Reinicia el video al principio
     });
-});
-
+      
+  });
 document.addEventListener('DOMContentLoaded', function() {
     // Para la tarjeta PHP - Symfony
     const phpSymfonyCard = document.querySelector('.card-php-symfony');
     const videoPhpSymfony = phpSymfonyCard.querySelector('video');
 
     phpSymfonyCard.addEventListener('mouseover', function() {
-        videoPhpSymfony.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+        videoPhpSymfony.play();
     });
 
     phpSymfonyCard.addEventListener('mouseout', function() {
@@ -117,9 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoFindeCiclo = findeCicloCard.querySelector('video');
 
     findeCicloCard.addEventListener('mouseover', function() {
-        videoFindeCiclo.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
-        });
+        videoFindeCiclo.play();
     });
 
     findeCicloCard.addEventListener('mouseout', function() {
@@ -127,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         videoFindeCiclo.currentTime = 0; // Reinicia el video al principio
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const btnReturn = document.querySelector('.btn-return');
 

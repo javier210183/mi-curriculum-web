@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     csharpCard.addEventListener('mouseover', function() {
         videoCsharp.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     angularCard.addEventListener('mouseover', function() {
         videoAngular.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     ionicCard.addEventListener('mouseover', function() {
         videoIonic.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     bddCard.addEventListener('mouseover', function() {
         videoBdd.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carritoCard.addEventListener('mouseover', function() {
         videoCarrito.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     javaCard.addEventListener('mouseover', function() {
         videoJava.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     phpSymfonyCard.addEventListener('mouseover', function() {
         videoPhpSymfony.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     findeCicloCard.addEventListener('mouseover', function() {
         videoFindeCiclo.play().catch(e => {
-            console.log("Error al intentar reproducir el video:", e.message);
+            
         });
     });
 

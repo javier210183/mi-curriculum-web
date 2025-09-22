@@ -310,11 +310,7 @@ p{
     object-position: center;
     display: block;
 }
-/* Escalar SOLO la card HealthyKID dentro del carrusel */
-.item-healthykid .card {
-  transform: scale(1.25);      /* sube o baja este valor: 1.1–1.4 */
-  transform-origin: center;
-}
+
 
 /* Si al escalar te roza el borde, puedes “acercarla” un poco hacia fuera */
 .item-healthykid {
@@ -417,3 +413,8 @@ p{
     position: relative; /* Asegura que el z-index funcione dentro del flujo normal del documento */
     
 }
+/* Compactar solo HealthyKID para que quepa dentro de 400x225 */
+.card-healthykid .card-img-overlay { padding: 8px; }
+.card-healthykid .card-title      { font-size: 1rem; line-height: 1.1; margin-bottom: .25rem; }
+.card-healthykid .card-text       { font-size: .85rem; line-height: 1.2; margin-bottom: .35rem; }
+.card-healthykid .btn             { padding: .35rem .7rem; font-size: .85rem; }

@@ -466,9 +466,11 @@ p{
 }
 
 /* Ajustes de tipografía dentro de la card (para que no “desborde”) */
-.banner .slider .card .card-title{ font-size: 1.05rem; line-height: 1.15; margin-bottom: .25rem; }
-.banner .slider .card .card-text { font-size: .88rem;  line-height: 1.25; margin-bottom: .35rem; }
-.banner .slider .card .btn       { padding: .4rem .75rem; font-size: .9rem; }
+  .banner .slider .card .card-img-overlay{ padding: 6px; }
+  .banner .slider .card .card-title{ font-size: .85rem; line-height: 1.1; margin-bottom: .2rem; }
+  .banner .slider .card .card-text { font-size: .75rem; line-height: 1.15; margin-bottom: .25rem; }
+  .banner .slider .card .btn{ font-size: .75rem; padding: .28rem .55rem; }
+  
 
 /* ============= Breakpoints ============= */
 @media (max-width: 1200px){
@@ -504,7 +506,7 @@ p{
 @media (max-width: 480px){
   :root{
     --card-w: 220px;
-    --card-h: 124px;
+    --card-h: 140px;
     --ring-r: 330px;
   }
   .banner .slider{ top: 16%; left: calc(50% - 110px); }

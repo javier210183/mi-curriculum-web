@@ -295,22 +295,22 @@ p{
     color: #000;
 }
 
-/* Estilos para la card de PHP - Symfony */
-.card-php-symfony {
+/* Estilos para la card de card-healthykid */
+.card-healthykid {
     color: #ec31cd; /* Color de texto */
     border: 2px solid black; 
     position: relative;
     overflow: hidden;
 }
 
-.card-php-symfony .card-img {
+.card-healthykid .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.card-php-symfony .card-img-overlay {
+.card-healthykid .card-img-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -324,12 +324,12 @@ p{
     align-items: center;
 }
 
-.card-php-symfony .card-title, .card-php-symfony .card-text {
+.card-healthykid .card-title, .card-healthykid .card-text {
     color: #ec31cd; /* Color del texto */
     text-align: center;
 }
 
-.card-php-symfony .btn {
+.card-healthykid .btn {
     color: #FFF;
     background-color: #007bff;
     border: none;
@@ -341,7 +341,7 @@ p{
     align-self: center;
 }
 
-/*.card-php-symfony .btn:hover {
+/*.card-card-healthykid .btn:hover {
     background-color: #0056b3;
 }
 */

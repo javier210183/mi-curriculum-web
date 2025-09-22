@@ -97,12 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrambled();
   }
 });
-// Animación automática de scramble cada 3 segundos (solo si está desordenado)
-setInterval(() => {
-  if (!letters[0].classList.contains('in-position')) {
-    setScrambled();
-  }
-}, 3000);
+
 
 
 /*////////////////*///////////////

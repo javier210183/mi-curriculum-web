@@ -408,3 +408,8 @@ p{
     position: relative; /* Asegura que el z-index funcione dentro del flujo normal del documento */
     
 }
+/* Compactar solo HealthyKID para que no se recorte */
+.card-healthykid .card-img-overlay { padding: 8px; }
+.card-healthykid .card-title      { font-size: 1rem; line-height: 1.1; margin-bottom: 4px; }
+.card-healthykid .card-text       { font-size: .85rem; line-height: 1.2; margin-bottom: 6px; }
+.card-healthykid .btn             { padding: .4rem .7rem; font-size: .9rem; }

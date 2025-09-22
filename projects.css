@@ -438,3 +438,72 @@ p{
 }
 .card-healthykid .card-title{ margin-bottom: .25rem; }
 .card-healthykid .card-text { margin-bottom: .25rem; }
+
+/*///////////////////probando para hacerlo responsive con un minimo//////////////////*/
+/* === Responsive para carrusel de Projects === */
+:root{
+  --card-w: 400px;
+  --card-h: 225px;
+  --ring-r: 550px;
+  --tilt: -16deg;
+  --persp: 1000px;
+}
+
+/* Usa variables en lugar de números fijos */
+.banner .slider{
+  width: var(--card-w);
+  height: var(--card-h);
+  transform: perspective(var(--persp));
+}
+.banner .slider .item{
+  /* Usa --quantity que ya pasas en el HTML */
+  transform:
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(var(--ring-r));
+}
+
+/* Ajustes de tipografía dentro de la card (para que no “desborde”) */
+.banner .slider .card .card-title{ font-size: 1.05rem; line-height: 1.15; margin-bottom: .25rem; }
+.banner .slider .card .card-text { font-size: .88rem;  line-height: 1.25; margin-bottom: .35rem; }
+.banner .slider .card .btn       { padding: .4rem .75rem; font-size: .9rem; }
+
+/* ============= Breakpoints ============= */
+@media (max-width: 1200px){
+  :root{
+    --card-w: 340px;
+    --card-h: 191px; /* 16:9 aprox */
+    --ring-r: 480px;
+  }
+}
+
+@media (max-width: 992px){
+  :root{
+    --card-w: 300px;
+    --card-h: 169px;
+    --ring-r: 430px;
+  }
+  .banner .content h1{ font-size: 10em; } /* baja el título gigante detrás */
+}
+
+@media (max-width: 768px){
+  :root{
+    --card-w: 260px;
+    --card-h: 146px;
+    --ring-r: 380px;
+  }
+  .banner .slider{ top: 14%; left: calc(50% - 130px); }
+  .banner .slider .card .card-title{ font-size: .95rem; }
+  .banner .slider .card .card-text { font-size: .8rem; }
+  .banner .slider .card .btn       { font-size: .8rem; padding: .35rem .6rem; }
+  .banner .content h1{ font-size: 7em; }
+}
+
+@media (max-width: 480px){
+  :root{
+    --card-w: 220px;
+    --card-h: 124px;
+    --ring-r: 330px;
+  }
+  .banner .slider{ top: 16%; left: calc(50% - 110px); }
+  .banner .content h1{ font-size: 4.5em; }
+}

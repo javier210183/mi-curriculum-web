@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleVideoPlayback('.card-bdd');
     handleVideoPlayback('.card-carrito');
     handleVideoPlayback('.card-java-javafx');
-    handleVideoPlayback('.card-php-symfony');
+    handleVideoPlayback('.card-healthykid');
     handleVideoPlayback('.card-findeCiclo');
 });
 

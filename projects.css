@@ -276,17 +276,17 @@ p{
 /* Estilos específicos para la card de TypeScript & Angular */
 .card-java-javafx .card-title,
 .card-java-javafx .card-text {
-    color: #141414 !important; 
+    color: #da0f0f !important; 
 }
 
 
 .card-java-javafx {
     color: #f3eb08; 
-    border: 2px solid #141414; 
+    border: 2px solid #da0f0f; 
 }
 /* Estilo para el botón de la card de Java */
 .card-java-javafx .btn {
-    background-color: #141414;
+    background-color: #da0f0f;
     color: #000;
     border: none;
 }

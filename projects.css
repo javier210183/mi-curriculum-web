@@ -295,34 +295,41 @@ p{
     color: #000;
 }
 
-/* Estilos para la card de HealthyKID */
-.card-healthykid {
-    color: #ffffff;              /* texto principal blanco para contraste */
-    border: 2px solid #000; 
+/* Estilos para la card de PHP - Symfony */
+.card-php-symfony {
+    color: #ec31cd; /* Color de texto */
+    border: 2px solid black; 
     position: relative;
     overflow: hidden;
 }
 
-.card-healthykid .card-img {
+.card-php-symfony .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
 }
 
-
-/* Si al escalar te roza el borde, puedes “acercarla” un poco hacia fuera */
-.item-healthykid {
-  z-index: 3;                  /* por si se superpone con otra */
+.card-php-symfony .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-healthykid .card-title,
-.card-healthykid .card-text {
-    color: #fff;                 /* texto blanco */
+.card-php-symfony .card-title, .card-php-symfony .card-text {
+    color: #ec31cd; /* Color del texto */
     text-align: center;
 }
-.card-healthykid .btn {
+
+.card-php-symfony .btn {
     color: #FFF;
     background-color: #007bff;
     border: none;
@@ -334,19 +341,7 @@ p{
     align-self: center;
 }
 
-.card-healthykid .btn {
-    color: #FFF;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-align: center;
-    margin-top: auto;
-    z-index: 3;
-    align-self: center;
-}
-
-/*.card-card-healthykid .btn:hover {
+/*.card-php-symfony .btn:hover {
     background-color: #0056b3;
 }
 */
@@ -413,8 +408,3 @@ p{
     position: relative; /* Asegura que el z-index funcione dentro del flujo normal del documento */
     
 }
-/* Compactar solo HealthyKID para que quepa dentro de 400x225 */
-.card-healthykid .card-img-overlay { padding: 8px; }
-.card-healthykid .card-title      { font-size: 1rem; line-height: 1.1; margin-bottom: .25rem; }
-.card-healthykid .card-text       { font-size: .85rem; line-height: 1.2; margin-bottom: .35rem; }
-.card-healthykid .btn             { padding: .35rem .7rem; font-size: .85rem; }

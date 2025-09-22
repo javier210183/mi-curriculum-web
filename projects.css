@@ -310,6 +310,16 @@ p{
     object-position: center;
     display: block;
 }
+/* Escalar SOLO la card HealthyKID dentro del carrusel */
+.item-healthykid .card {
+  transform: scale(1.25);      /* sube o baja este valor: 1.1–1.4 */
+  transform-origin: center;
+}
+
+/* Si al escalar te roza el borde, puedes “acercarla” un poco hacia fuera */
+.item-healthykid {
+  z-index: 3;                  /* por si se superpone con otra */
+}
 
 .card-healthykid .card-title,
 .card-healthykid .card-text {

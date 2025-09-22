@@ -105,3 +105,22 @@ iframe {
 @media (prefers-reduced-motion: reduce){
   .letter{ animation: none !important; }
 }
+
+/* Estados para controlar estilos según animación */
+.letters-scrambling .letter { will-change: transform, top, left; }
+.letters-ordered .letter    { will-change: transform, top, left; }
+
+/* Móvil: reducir tamaño y sombras SOLO en desordenado
+   para que, cuando se crucen, no “emborronen” */
+@media (max-width: 768px){
+  .letters-scrambling .letter{
+    font-size: 16vw;                 /* más pequeño mientras se mueven */
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    opacity: .9;                     /* un pelín menos opacas si se cruzan */
+  }
+  .letters-ordered .letter{
+    font-size: 14vw;                 /* tamaño final ordenado (legible) */
+    text-shadow: 0 2px 6px rgba(0,0,0,.35);
+    opacity: 1;
+  }
+}

@@ -296,21 +296,21 @@ p{
 }
 
 /* Estilos para la card de card-healthykid */
-.card-card-healthykid {
+.card-healthykid {
     color: #ec31cd; /* Color de texto */
     border: 2px solid black; 
     position: relative;
     overflow: hidden;
 }
 
-.card-card-healthykid .card-img {
+.card-healthykid .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.card-card-healthykid .card-img-overlay {
+.card-healthykid .card-img-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -324,12 +324,12 @@ p{
     align-items: center;
 }
 
-.card-card-healthykid .card-title, .card-card-healthykid .card-text {
+.card-healthykid .card-title, .card-healthykid .card-text {
     color: #ec31cd; /* Color del texto */
     text-align: center;
 }
 
-.card-card-healthykid .btn {
+.card-healthykid .btn {
     color: #FFF;
     background-color: #007bff;
     border: none;

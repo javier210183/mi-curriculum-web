@@ -81,10 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let ordered = false;
 
     centralArea.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      if (ordered) { setScrambled(); } else { setOrdered(); }
-      ordered = !ordered;
+    // Si el toque viene de un <a>, no lo bloquees
+    if (e.target.tagName.toLowerCase() === 'a') return;
+
+    e.preventDefault(); // solo cuando es un toque sobre el área, no sobre un enlace
+    if (ordered) { setScrambled(); } else { setOrdered(); }
+    ordered = !ordered;
     }, { passive: false });
+
   } else {
     // DESKTOP: hover como tenías
     centralArea.addEventListener('mouseenter', setOrdered);
@@ -93,6 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrambled();
   }
 });
+// Animación automática de scramble cada 3 segundos (solo si está desordenado)
+setInterval(() => {
+  if (!letters[0].classList.contains('in-position')) {
+    setScrambled();
+  }
+}, 3000);
 
 
 /*////////////////*///////////////
